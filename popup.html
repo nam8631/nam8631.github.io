@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <strong>CMS Admin</strong>
+    <span id="current" class="muted"></span>
+  </header>
+
+  <div id="sites" class="sites"></div>
+
+  <div class="actions">
+    <button id="palette">⚡ Bảng lệnh <kbd>Alt+K</kbd></button>
+    <button id="pin">📌 Ghim trang này <kbd>Alt+Shift+P</kbd></button>
+    <button id="exportTable">⬇ Xuất bảng CSV</button>
+  </div>
+  <div id="msg" class="msg"></div>
+
+  <section>
+    <h3>📌 Trang đã ghim
+      <select id="pinFilter" class="filter"><option value="">Tất cả</option></select>
+    </h3>
+    <ul id="pins" class="list"></ul>
+    <div class="row">
+      <button id="exportPins" class="small">Xuất ghim</button>
+      <label class="small btnlike">Nhập ghim<input id="importPins" type="file" accept="application/json" hidden /></label>
+    </div>
+  </section>
+
+  <section>
+    <h3>🕘 Gần đây <button id="clearRecent" class="link small">Xoá</button></h3>
+    <ul id="recent" class="list"></ul>
+  </section>
+
+  <section>
+    <h3>⚙️ Cài đặt <span class="muted">(tải lại trang CMS để áp dụng)</span></h3>
+    <label><input type="checkbox" data-s="palette" /> Bảng lệnh tìm nhanh (Alt+K)</label>
+    <label><input type="checkbox" data-s="floatingButton" /> Nút ⚡ nổi góc màn hình</label>
+    <label><input type="checkbox" data-s="tableTools" /> Lọc nhanh / xuất CSV cho bảng</label>
+    <label><input type="checkbox" data-s="smartFields" /> Tự tạo Slug, SEO title, Meta description + đếm ký tự</label>
+    <label><input type="checkbox" data-s="smartSelect" /> Ô chọn dài (Danh mục…) có ô tìm kiếm</label>
+    <label><input type="checkbox" data-s="ctrlS" /> Ctrl+S = bấm nút Lưu</label>
+    <label><input type="checkbox" data-s="formDraft" /> Tự lưu nháp khi nhập form</label>
+    <label><input type="checkbox" data-s="recent" /> Ghi nhớ trang đã xem</label>
+    <label><input type="checkbox" data-s="tabPrefix" /> Thêm [tên CMS] vào tiêu đề tab</label>
+  </section>
+
+  <script src="sites.js"></script>
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

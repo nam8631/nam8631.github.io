@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "CMS Admin – Trợ lý quản trị (Biển Đông + T-Tech)",
+  "version": "1.2.0",
+  "description": "Bảng lệnh Alt+K, tự tạo slug/SEO, chọn danh mục có tìm kiếm, Ctrl+S lưu, tự lưu nháp, lọc/xuất bảng CSV, chuyển nhanh giữa các CMS.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://cms.biendongco.com.vn/*", "https://cms.ttech.com.vn/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CMS Admin – Trợ lý quản trị",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://cms.biendongco.com.vn/*", "https://cms.ttech.com.vn/*"],
+      "js": ["sites.js", "common.js", "forms.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "open-palette": {
+      "suggested_key": { "default": "Alt+K" },
+      "description": "Mở bảng lệnh tìm nhanh"
+    },
+    "pin-page": {
+      "suggested_key": { "default": "Alt+Shift+P" },
+      "description": "Ghim trang hiện tại"
+    }
+  }
+}

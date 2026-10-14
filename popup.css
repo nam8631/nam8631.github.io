@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { width: 360px; margin: 0; padding: 12px; font: 13px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #111827; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 15px; }
+button, .btnlike {
+  border: 1px solid #cbd5e1; background: #fff; border-radius: 6px; padding: 7px 10px; cursor: pointer; font: inherit;
+}
+button:hover, .btnlike:hover { border-color: #1d4ed8; color: #1d4ed8; }
+.sites { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.sites button { font-weight: 600; }
+.site {
+  display: inline-block; margin-right: 5px; padding: 0 5px; border-radius: 4px; color: #fff;
+  font-style: normal; font-size: 10px; font-weight: 600; line-height: 16px; vertical-align: 1px;
+}
+.filter { float: right; font-size: 11px; padding: 1px 4px; border: 1px solid #cbd5e1; border-radius: 4px; }
+.actions { display: grid; gap: 6px; }
+.actions button { text-align: left; }
+kbd { float: right; font-size: 11px; color: #6b7280; }
+.link { border: 0; background: none; color: #1d4ed8; padding: 0; }
+.small { font-size: 12px; padding: 4px 8px; }
+.link.small { padding: 0; margin-left: 6px; font-weight: normal; }
+.muted { color: #9ca3af; font-weight: normal; font-size: 11px; }
+.msg { min-height: 16px; margin: 6px 0; color: #b45309; font-size: 12px; }
+section { border-top: 1px solid #e5e7eb; padding-top: 8px; margin-top: 8px; }
+h3 { font-size: 13px; margin: 0 0 6px; }
+.list { list-style: none; margin: 0; padding: 0; max-height: 170px; overflow-y: auto; }
+.list li { display: flex; align-items: center; gap: 4px; padding: 4px 6px; border-radius: 6px; }
+.list li:hover { background: #eff6ff; }
+.list .t { flex: 1; cursor: pointer; overflow: hidden; }
+.list .t b { display: block; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.list .t span { display: block; color: #9ca3af; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.list .t b[contenteditable="true"] { outline: 1px solid #1d4ed8; background: #fff; text-overflow: clip; }
+.list li button { border: 0; background: none; padding: 2px 4px; color: #9ca3af; }
+.list li button:hover { color: #1d4ed8; }
+.list .empty { color: #9ca3af; }
+.row { display: flex; gap: 6px; margin-top: 6px; }
+label { display: block; padding: 3px 0; }
